@@ -9,7 +9,7 @@ $(document).ready(function () {
     //Boton listar primero
     $btnusuario.on('click', function () {
         $.ajax({
-            url: 'http://localhost:5000/users/user1',
+            url: 'https://back-express-psi.vercel.app/api/users/user1',
             method: 'GET',
             dataType: 'json',
             success: function (user) {
@@ -29,7 +29,7 @@ $(document).ready(function () {
     //Boton listar todos
     $btntodos.on('click', function () {
         $.ajax({
-            url: 'http://localhost:5000/users', 
+            url: 'https://back-express-psi.vercel.app/api/users', 
             method: 'GET',
             dataType: 'json',
             success: function (users) {
@@ -89,7 +89,7 @@ $(document).ready(function () {
 
 
             $.ajax({
-                url: 'http://localhost:5000/users',
+                url: 'https://back-express-psi.vercel.app/api/users',
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ id: parseInt(id), nombre, apellido, telefono }),
@@ -122,7 +122,7 @@ $(document).ready(function () {
             }
 
             $.ajax({
-                url: `http://localhost:5000/users/${userId}`, 
+                url: `https://back-express-psi.vercel.app/api/users/${userId}`, 
                 method: 'GET',
                 dataType: 'json',
                 success: function (user) {
